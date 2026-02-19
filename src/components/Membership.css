@@ -1,0 +1,219 @@
+/* Membership.css */
+.membership-section {
+    padding: 6rem 0;
+    background-color: var(--color-bg);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.highlight-text {
+    color: var(--color-primary);
+}
+
+.plans-container {
+    display: flex;
+    flex-direction: row;
+    /* Horizontal row */
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+    justify-content: center;
+    /* Center the cards */
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    /* Wider container */
+    margin: 0 auto;
+}
+
+.plan-card {
+    background-color: #222;
+    /* Dark card background */
+    border-radius: 12px;
+    flex: 1 1 300px;
+    /* Grow/shrink, basis 300px */
+    display: flex;
+    flex-direction: column;
+    /* Vertical within the card itself */
+    justify-content: space-between;
+    align-items: stretch;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    min-height: 400px;
+    /* Ensure consistent height */
+}
+
+.plan-card:hover {
+    transform: scale(1.02);
+    border: 1px solid var(--color-primary);
+}
+
+/* Left Side: Header Badge + Features */
+.card-content-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+}
+
+.plan-header-badge {
+    background-color: var(--color-primary);
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    border-radius: 0;
+}
+
+.plan-name {
+    color: black;
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+}
+
+.plan-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.check-icon {
+    background-color: var(--color-primary);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.check-icon svg {
+    width: 14px;
+    height: 14px;
+    stroke: black;
+    /* Checkmark color inside yellow circle */
+}
+
+/* Right Side: Price + Button */
+.card-content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Changed from flex-end */
+    padding: 1.5rem;
+    /* Changed from 2rem */
+    text-align: center;
+    /* Changed from right */
+    min-width: auto;
+    /* Changed from 200px */
+    background: none;
+    /* Changed from linear-gradient */
+    border-top: 1px solid #333;
+    /* Added for separation */
+    width: 100%;
+    /* Added for vertical stacking */
+}
+
+.plan-price-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+.plan-price {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1;
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.currency {
+    font-size: 1.5rem;
+    margin-top: 8px;
+    margin-right: 4px;
+}
+
+.period {
+    color: var(--color-primary);
+    font-family: 'Handlee', sans-serif;
+    /* Or fall back to heading font */
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+
+.btn-whatsapp {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-whatsapp:hover {
+    background-color: var(--color-primary);
+    color: black;
+    border-color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .plan-card {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .card-content-right {
+        padding: 1.5rem;
+        align-items: center;
+        /* Center align on mobile */
+        text-align: center;
+        background: none;
+        border-top: 1px solid #333;
+    }
+
+    .plan-header-badge {
+        width: 100%;
+        border-bottom-right-radius: 0;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .plan-features {
+        padding: 1.5rem;
+    }
+
+    .plan-price {
+        justify-content: center;
+    }
+}
